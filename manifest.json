@@ -1,0 +1,60 @@
+{
+	"manifest_version": 2,
+	"name": "蝴蝶主页",
+	"version": "1.0",
+	"description": "一个极简的主页和网页优化器：净化常用下载站与百度首页。",
+	"author": "wih718",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+    },
+   
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title":"打开蝴蝶工具箱"
+    },
+    "chrome_url_overrides":
+	{
+		
+		"newtab": "Q.html"
+    },
+    "background":
+	{
+		
+		"page": "Q.html"
+		
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://www.baidu.com/*","https://www.cr173.com/*"],
+            "js": ["jquery.min.js","content-script.js"],
+            "run_at": "document_end"
+        },
+        {
+			"matches": ["https://www.baidu.com/*"],
+            "js": ["jquery.min.js","content-script.js"],
+            "css": ["baidu.css"],
+            "run_at": "document_end"
+		}
+    ],
+    "homepage_url": "http://blog.borebooks.top/articles/2020/06/30/1593528058731.html",
+	"web_accessible_resources": 
+	[
+		"inject.js"
+    ],
+    "permissions":
+	[
+		"contextMenus", 
+		"tabs",
+		"notifications", 
+		"webRequest", 
+		"webRequestBlocking",
+		"storage", 
+		"http://*/*", 
+		"https://*/*" 
+	]
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+     *{
+        transition:all 300ms!important;
+    }
+   
+    body{
+        background:  #f2f2f2;
+        
+    }
+    .night--mode{
+        background-color: #5a5a5a;
+    }
+    header{
+        margin-top: 6%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .beautiful__header--logo{
+        width: 50px;
+        margin:  10px;
+        height: 50px;
+    }
+    .beautiful__body--search{
+        width: 50%;
+        box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        margin-left: 25%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        align-content: center;
+        margin-top: 20px;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    .beautiful__search--input{
+        border: none;
+        min-width: 250px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .beautiful__search--input:focus{
+        border-bottom: 1px solid #1260ff;
+        outline: none;
+    }
+    .beautiful__search--btn{
+        border: none;
+        cursor: pointer;
+        line-height: normal;
+        padding: 5px 10px;
+        color: #fff;
+        border-radius: 15px;
+        margin-left: 20px;
+       
+        background-color: #1260ff;
+
+    }
+    .beautiful__search--btn:focus{
+        outline: none;
+        box-shadow: inset 7px 7px 9px #1054e0, 
+            inset -7px -7px 9px #146cff;
+    }
+    footer{
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    color: gray;
+    text-align:center;  
+    }
+    .beautiful__footer--link{
+        color: gray;
+    }
+   
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蝴蝶极简主页</title>
+</head>
+<!-- Author：IWH718 博客：blog.borebooks.top -->
+<body id="body">
+    <header>
+        <img class="beautiful__header--logo" src="./icon.png" alt="给不爱蔗糖的你的简单主页！" aria-label="蝴蝶LOGO" aria-roledescription="蝴蝶主页的LOGO图片" title="给不爱蔗糖的你的简单主页！"/>
+        <img class="beautufil__header--words" title="引用今日诗词API" alt="今日诗词" src="https://v2.jinrishici.com/one.svg?color=gray" >
+    </header>
+   <section>
+    <div class="beautiful__body--search" id="search">
+        <input id="searchInput" type="search" name="searchStr" class="beautiful__search--input"/>
+        <button  id="searchBtn" class="beautiful__search--btn">搜索一下</button>
+    </div>
+   </section>
+   <footer>
+       <div class="beautiful__footer--update">蝴蝶v1.0.0 by IWH718 <a class="beautiful__footer--link" target="_blank" title="获取蝴蝶新版本！" href="http://blog.borebooks.top/articles/2020/06/30/1593528058731.html">检查更新</a></div>
+   </footer>
+</body>
+<script src="./home.js"></script>
+<script src="./bg.js"></script>
+</html>

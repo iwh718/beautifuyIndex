@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>蝴蝶</title>
+	<style>
+		body{
+			
+			width: 200px;
+			height: 100px;
+			background-color: #fff;
+		}
+		.pop__tks--img{
+			display: none;
+			width: 180px;
+			transition: 300ms;
+			margin-left: 10px;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+		.pop__search--btn{
+			color: #1260ff;
+			text-decoration: none;
+			border-bottom: none;
+			display: block;
+			margin-top: 10px;
+		}
+		#createCode{
+			margin-top: 10px;
+			border: none;
+			cursor: pointer;
+		}
+		#qrcode{
+			transition: 300ms;
+			display: none;
+			width: 100px;
+			margin-left: 50px;
+			height: 100px;
+			margin-top: 20px;
+			box-sizing: border-box;
+			margin-bottom: 50px;
+		}
+		#resolveLimit{
+			display: block;
+			margin-top: 5px;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		蝴蝶设置面板
+	</div>
+	<a class="pop__search--btn" href="./Q.html" target="_blank">打开蝴蝶搜索</a>
+	<br>
+	<button id="resolveLimit"  >解除网页限制</button>
+	<button id="createCode"  >生成当前页面二维码</button>
+	<div id="qrcode"></div>
+	<footer>
+		<h3 id="thanks__dev">捐助开发者 <img src="./down.png" style="width: 15px;cursor: pointer;"/></h3>
+		<img class="pop__tks--img" src="./alipay.jpg" />
+	</footer>
+	<script src="./qrcode.min.js"></script>
+	<script src="./popup.js"></script>
+	
+</body>
+</html>
