@@ -38,15 +38,5 @@ thanks__dev.onclick = ()=>{
         document.querySelector('.pop__tks--img').style.display = 'none';
     }
 }
-//解除限制
-resolveLimit.onclick = ()=>{
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
-	{
-       
-        console.log('解除限制')
-        let resolveContextMenu = "document.oncontextmenu=function(e){console.log('去除限制');return true}";
-        chrome.tabs.executeScript(tabs[0].id, {code: resolveContextMenu});
-	});
-    
 
-}
+

@@ -1,6 +1,4 @@
 console.log('%c蝴蝶工具箱启动',"background:#1260ff;border-radius:5px;padding:2px 4px ;color:#fff")
-
-
 chrome.contextMenus.removeAll();
 chrome.contextMenus.create({
 	title: "打开蝴蝶搜索",
@@ -10,32 +8,10 @@ chrome.contextMenus.create({
 	title: "查看明文密码",
 	onclick: function(){
         getCurrentTabId((tabId)=>{
-            chrome.tabs.executeScript(tabId, {code: "document.querySelector('input[type=password]').setAttribute('type','text')"});
+            chrome.tabs.executeScript(tabId, {code: "document.querySelectorAll('input[type=password]').forEach((e)=>{e.setAttribute('type','text')});"});
         }) 
     }
 });
-
-
-chrome.contextMenus.create({
-	title: "开启开发者工具",
-	onclick: function(){
-
-        notice('开始完成','')
-
-    }
-});
-
-chrome.contextMenus.create({
-	title: '使用度娘搜索：%s', // %s表示选中的文字
-	contexts: ['selection'], // 只有当选中文字时才会出现此右键菜单
-	onclick: function(params)
-	{
-		
-		chrome.tabs.create({url: 'https://www.baidu.com/s?ie=utf-8&wd=' + encodeURI(params.selectionText)});
-	}
-});
-
-
 
 function openIndex(){
    
@@ -59,6 +35,17 @@ function notice(str,message){
         title: str,
         message:message
     });
+}
+
+function getHistory(callback){
+   
+    chrome.history.search({
+        'text': '',              // Return every history item....
+        'startTime': 1000*60*60*24*3  // that was accessed less than one week ago.
+      },
+      function(historyItems) {
+          console.log(historyItems)
+      });
 }
 
 

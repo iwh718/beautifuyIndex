@@ -8,6 +8,7 @@
    
     body{
         background:  #f2f2f2;
+       
         
     }
     .night--mode{
@@ -75,7 +76,127 @@
     .beautiful__footer--link{
         color: gray;
     }
+    #addUrl{
+
+        padding: 5px;
+        border: none;
+        margin-left: 20%;
+        opacity: .3;
+        margin-top: 20px;
+        font-size: 12px;
+        cursor: pointer;
+
+    }
+    #addUrl:hover{
+        opacity: .9;
+    }
+    .beautiful__like--list{
+        width: 60%;
+        margin-left: 20%;
+        align-items: center;
+        align-content: center;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .beautiful__like--url{
+        color: #000;
+        padding: 5px 10px;
+        box-shadow:  0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+        margin-left: 20px;
+        box-sizing: border-box;
+        background:#fff;
+        border-radius: 20px;
+        margin-top: 10px;
+        color: gray;
+        transition: 200ms;
+       text-decoration: none;
+    }
+    .beautiful__like--url:hover{
+        transition: 200ms;
+        transform: translateY(-5px);
+        box-shadow: 0 2px 3px 3px #1261ff4d;
+        background:#1260ff;
+       color: #fff;
+    }
+    .beautiful__add--modal{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: 300ms;
+        height: 100%;
+        left: 0;
+        background:#5a5a5a96
+    }
+    .modal__mask{
+        position: relative;
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 25%;
+        padding: 20px;
+        box-sizing: border-box;
+        background:#fff;
+        border-radius: 15px;
+       
+    }
+    .modal__title{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .modal__body{
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 10px;
+    }
+    .modal__body input{
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .modal__footer{
+        margin-top: 10px;
+       padding: 10px;
+
+    }
+    .modal__footer button{
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 20px;
+
+    }
+   #submit__modal{
+    background:#1260ff
+   }
+   #cancel__modal{
+       background:rgb(240, 72, 72)
+   }
+   label{
+       margin-top: 20px;
+   }
+   .modal__body input:focus{
+    outline: none;
+    border-bottom: 1px solid #1260ff;
+   }
+   .tips{
+       font-size: 10px;
+       opacity: .8;
+       margin-left: 10px;
+       color: red;
+   }
    
+   #deleteTrash{
+       position: fixed;
+       width: 100%;
+       bottom: 0;
+       height: 30%;
+       left: 0;
+       text-align: center;
+       padding-top: 10px;
+       background:linear-gradient(to top,rgb(0, 0, 0),rgba(255, 255, 255, 0))
+   }
+
 </style>
 <head>
     <meta charset="UTF-8">
@@ -90,14 +211,40 @@
     </header>
    <section>
     <div class="beautiful__body--search" id="search">
-        <input id="searchInput" type="search" name="searchStr" class="beautiful__search--input"/>
-        <button  id="searchBtn" class="beautiful__search--btn">搜索一下</button>
+        <input id="searchInput" type="search" aria-label="输入搜索关键字" name="searchStr" class="beautiful__search--input"/>
+        <button  id="searchBtn" aria-label="搜索按钮" type="search"  class="beautiful__search--btn">搜索一下</button>
     </div>
    </section>
+
+   <section class="beautiful__like--list">
+   </section>
+   <button id="addUrl"> + 添加常用网站</button>
+   <view id="deleteTrash" style="display: none;">拖到这删除！</view>
+   <div class="beautiful__add--modal" style="display: none;">
+       <div class="modal__mask">
+
+        <div class="modal__title">添加常用网址<span class="tips"></span></div>
+        <div class="modal__body">
+         <label>名字
+             <input type="text" aria-required="true" maxlength="50" required aria-label="输入网站名字" name='addUrlName' />
+         </label>
+         <label>
+             网址
+             <input aria-label="输入网址" aria-required="true" required maxlength="50" name='addUrl' />
+         </label>
+        </div>
+        <div class="modal__footer">
+             <button id="submit__modal">确定</button>
+             <button id="cancel__modal">取消</button>
+ 
+        </div>
+       </div>
+   </div>
    <footer>
-       <div class="beautiful__footer--update">蝴蝶v1.0.0 by IWH718 <a class="beautiful__footer--link" target="_blank" title="获取蝴蝶新版本！" href="http://blog.borebooks.top/articles/2020/06/30/1593528058731.html">检查更新</a></div>
+       <div class="beautiful__footer--update">蝴蝶v1.0.1 by IWH718 <a class="beautiful__footer--link" target="_blank" title="获取蝴蝶新版本！" href="http://blog.borebooks.top/articles/2020/06/30/1593528058731.html">检查更新</a></div>
    </footer>
 </body>
-<script src="./home.js"></script>
-<script src="./bg.js"></script>
+<script src="./js/bg.js"></script>
+<script src="./js/home.js"></script>
+
 </html>

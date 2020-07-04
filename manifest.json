@@ -24,20 +24,21 @@
     "background":
 	{
 		
-		"page": "Q.html"
+		
+		"scripts":["js/bg.js"]
 		
 	},
 	"content_scripts": 
 	[
 		{
-			"matches": ["https://www.baidu.com/*","https://www.cr173.com/*"],
-            "js": ["jquery.min.js","content-script.js"],
+			"matches": ["https://www.baidu.com/*","https://www.cr173.com/*","http://xiazai.zol.com.cn/*","https://dl.pconline.com.cn/*"],
+            "js": ["js/jquery.min.js","js/content-script.js"],
             "run_at": "document_end"
         },
         {
 			"matches": ["https://www.baidu.com/*"],
-            "js": ["jquery.min.js","content-script.js"],
-            "css": ["baidu.css"],
+            "js": ["js/jquery.min.js","js/content-script.js"],
+            "css": ["css/baidu.css"],
             "run_at": "document_end"
 		}
     ],
@@ -52,6 +53,7 @@
 		"tabs",
 		"notifications", 
 		"webRequest", 
+		"history",
 		"webRequestBlocking",
 		"storage", 
 		"http://*/*", 
