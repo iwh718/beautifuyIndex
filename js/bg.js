@@ -12,12 +12,9 @@ chrome.contextMenus.create({
         }) 
     }
 });
-
 function openIndex(){
-   
     chrome.tabs.create({ url: chrome.runtime.getURL('./Q.html') });
 }
-
 function getCurrentTabId(callback)
 {
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
@@ -27,7 +24,6 @@ function getCurrentTabId(callback)
         console.log('tabId:' + tabs[0].id)
 	});
 }
-
 function notice(str,message){
     chrome.notifications.create(null, {
         type: 'basic',
@@ -36,9 +32,7 @@ function notice(str,message){
         message:message
     });
 }
-
 function getHistory(callback){
-   
     chrome.history.search({
         'text': '',              // Return every history item....
         'startTime': 1000*60*60*24*3  // that was accessed less than one week ago.

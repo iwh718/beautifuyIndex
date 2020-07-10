@@ -1,16 +1,7 @@
     /**
      * @author iwh718 wx:18712505420
      */
-    let d = new Date();
-    if(d.getHours() > 20 || d.getHours() <= 6){
-        //切换夜间模式
-        body.style.color = '#fff!important';
-        body.style.background = '#3a3a3a';
-        search.style.background = '#5a5a5a';
-        search.style.boxShadow = 'none';
-        searchInput.style.background = 'transparent';
-        searchInput.style.borderBottomColor = '#3a3a3a';
-    }
+  
     document.body.onclick = ()=>deleteTrash.style.display = 'none';
     searchBtn.onclick = ()=>{
         window.location.href = 'https://www.baidu.com/s?ie=utf-8&wd=' + encodeURI(searchInput.value);
@@ -63,7 +54,7 @@
         let url = document.querySelector('input[name=addUrl]').value;
         if(!!name && !!url){
             
-            let likes  = JSON.parse(localStorage.getItem('likeList')||[]);
+            let likes  = JSON.parse(localStorage.getItem('likeList')||"[]");
             likes.push({
                 name,
                 url
@@ -75,6 +66,26 @@
         }else{
            document.querySelector('.tips').textContent = '请输入信息！';
         }
+
+    }
+
+
+    let d = new Date();
+    if(d.getHours() > 20 || d.getHours() <= 6){
+        //切换夜间模式
+        body.style.color = '#fff!important';
+        body.style.background = '#3a3a3a';
+        search.style.background = '#5a5a5a';
+        search.style.boxShadow = 'none';
+        searchInput.style.background = 'transparent';
+        searchInput.style.borderBottomColor = '#3a3a3a';
+        document.querySelectorAll('.beautiful__like--url').forEach((ele,i)=>{
+            ele.style.boxShadow = 'none';
+        })
+    }
+
+    //切换夜间与日间
+    function modeChange(){
 
     }
     
