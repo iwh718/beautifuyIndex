@@ -1,25 +1,6 @@
-body{
-    background-color: #f2f2f2!important;
-}
-#head{
-    background-color: #f2f2f2!important;
-}
-.quickdelete-wrap{
-    background-color: #fff;
-    box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
-    
-}
 
-.wrapper_new .s_ipt_wr{
-    border: none!important;
-    background-color: #fff!important;
-}
-.wrapper_new .s_btn_wr .s_btn{
-    background-color: #fff!important;
-    box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)!important;
-    color: #1260ff!important;
-    height: 40px!important;
-}
+
+
 /* 移除百度热榜 */
 .cr-offset{
     display:none!important
@@ -49,8 +30,4 @@ body{
 #s_wrap,#s_lm_wrap,.s-top-left,.s-top-right,.s-center-box,#s_top_wrap{
     display: none!important
 }
-#head_wrapper #kw{
-    border: none!important;
-   
 
-}

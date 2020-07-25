@@ -11,6 +11,10 @@
        
         
     }
+    a{
+        text-decoration: none;
+        border-bottom: none;
+    }
     .night--mode{
         background-color: #5a5a5a;
     }
@@ -108,9 +112,10 @@
         background:#fff;
         border-radius: 20px;
         margin-top: 10px;
+       
         color: gray;
         transition: 200ms;
-       text-decoration: none;
+       text-decoration: none!important;
     }
     .beautiful__like--url:hover{
         transition: 200ms;
@@ -241,10 +246,19 @@
        </div>
    </div>
    <footer>
-       <div class="beautiful__footer--update">蝴蝶v1.0.1 by IWH718 <a class="beautiful__footer--link" target="_blank" title="获取蝴蝶新版本！" href="http://blog.borebooks.top/articles/2020/06/30/1593528058731.html">检查更新</a></div>
+       <div class="beautiful__footer--update">
+           <a class="beautiful__footer--link" href="#">蝴蝶v1.0.1 by IWH718 </a>
+           <a class="beautiful__footer--link" target="_blank" title="获取蝴蝶新版本！"  href="http://blog.borebooks.top/articles/2020/06/30/1593528058731.html">检查更新</a>
+            &nbsp; 
+            <a href="chrome-extension://cegojdchpgjjenbjicdbmfaemonbmeme/options.html" class="beautiful__footer--link" target="_black">设置</a>
+          &nbsp;
+          <a href="#" id="changeThemeBtn"  class="beautiful__footer--link" >切换主题</a>
+        </div>
+       
    </footer>
 </body>
 <script src="./js/bg.js"></script>
 <script src="./js/home.js"></script>
+
 
 </html>

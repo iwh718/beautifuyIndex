@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蝴蝶主页设置</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-size: 100% 100%;
+            background:  #f2f2f2;
+        }
+        .options__card{
+            width: 800px;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        .beautiful__header--logo{
+        width: 50px;
+        margin:  10px;
+        height: 50px;
+    }
+    header{
+        display: grid;
+        place-items: center;
+    }
+    footer{
+        display: grid;
+        place-items: center;
+        width: 800px;
+        margin: 20px auto;
+    }
+    .pop__tks--img{
+        width: 200px;
+        display: inline-block
+    }
+    .options__list__item{
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .item__title{
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .item__desc{
+        font-size: 10px;
+        opacity: .8;
+    }
+    .options__footer__actions{
+        width: 100%;
+        display: flex;
+
+
+    }
+   .actions__item{
+        margin:5px;
+    }
+    .options__btn{
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 5px;
+    }
+    .options__btn{
+        outline: none;
+    }
+    .options__btn--primary{
+        background-color:rgb(28, 153, 143);
+
+    }
+    .options__btn--default{
+        background-color: gray;
+    }
+   
+    </style>
+  
+</head>
+<body>
+
+    <header>
+        <img class="beautiful__header--logo" src="./icon.png" alt="给不爱蔗糖的你的简单主页！" aria-label="蝴蝶LOGO" aria-roledescription="蝴蝶主页的LOGO图片" title="给不爱蔗糖的你的简单主页！"/>
+        <h3>设置蝴蝶主页</h3>
+    </header>
+   
+        <section class="options__card">
+            <div class="options__list">
+                <div class="options__list__item">
+                    <div class="options__item__left">
+                        <div class="item__title">设置主页背景</div>
+                        <div class="item__desc">自定义背景图后，夜间模式将失效</div></div>
+                    <div class="options__item__right">
+                        <input name="selectBg" accept="image/*" id="bgFile"  type="file" class="options__btn options__btn--primary"/>
+                        <button class="options__btn options__btn--default">恢复默认</button>
+                    </div>
+                </div>
+
+                <div class="options__list__item">
+                    <div class="options__item__left">
+                        <div class="item__title">社区</div>
+                        <div class="item__desc">QQ交流群：914105779</div></div>
+                    
+                </div>
+
+                <div class="options__list__item">
+                    <div class="options__item__left">
+                        <div class="item__title">功能</div>
+                        <div class="item__desc">1.设置该插件显示在工具条后，点击图标后，支持生成当前页面的二维码地址 
+                            <br>2.任何页面右键支持部分网站显示明文密码【更多网站尽请期待】
+                            <br>3.屏蔽部分网站的高速下载按钮。
+                            <br>4.点击拖动快捷网址按钮到主页底部删除该快捷方式。
+                        </div></div>
+                    
+                </div>
+
+            </div>
+                <div class="options__footer__actions">
+                    <div class="actions__item">version v1.0.4</div>
+                    <div class="actions__item">切换语言【稍后】</div>
+                    <div class="actions__item"><a style="text-decoration: none;" href="http://blog.borebooks.top/articles/2020/06/30/1593528058731.html">我想要其他功能</a></div>
+                </div>
+        </section>
+
+        <footer>
+		<h3 id="thanks__dev" style="margin: 10px;">扫码捐助开发者</h3>
+        <div style="display: flex;border-radius: 5px;overflow:hidden;">
+            <img class="pop__tks--img" src="./res/alipay.jpg" />
+        <img class="pop__tks--img" src="./res/wx.jpeg" />
+        </div>
+	</footer>
+<script async src="./js/options.js"></script>
+</body>
+</html>

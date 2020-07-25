@@ -68,27 +68,57 @@
         }
 
     }
+    //主题切换 
+    changeThemeBtn.onclick = ()=>{
+         //切换模式
+         let theme = localStorage.getItem('theme')
+         theme === 'dark' ? changeTheme('light'):changeTheme('dark');
+        
+    }
 
 
-    let d = new Date();
-    if(d.getHours() > 20 || d.getHours() <= 6){
-        //切换夜间模式
-        body.style.color = '#fff!important';
-        body.style.background = '#3a3a3a';
-        search.style.background = '#5a5a5a';
-        search.style.boxShadow = 'none';
-        searchInput.style.background = 'transparent';
-        searchInput.style.borderBottomColor = '#3a3a3a';
+    //初始化背景
+    if(localStorage.getItem('bg')){
+         changeBg(localStorage.getItem('bg'))
+   
+    }
+
+    //修改主题
+    function changeTheme(type){
+        localStorage.setItem('theme',type);
+        if(type === 'dark'){
+            console.log('夜间模式')
+            body.style.color = '#fff!important';
+            body.style.background = '#3a3a3a';
+            search.style.background = '#5a5a5a';
+            search.style.boxShadow = 'none';
+            searchInput.style.background = 'transparent';
+            searchInput.style.borderBottomColor = '#3a3a3a';
+            document.querySelectorAll('.beautiful__like--url').forEach((ele,i)=>{
+                ele.style.boxShadow = 'none';
+            })
+        }else{
+            location.reload()
+        }
+        
+       
+    }
+
+    //初始化背景
+    function changeBg(base64Url){
+        document.body.style.background = 'url('+base64Url+')';
+        document.body.style.backgroundSize = '100%';
+        document.querySelector('.beautiful__body--search').style.boxShadow = 'none';
         document.querySelectorAll('.beautiful__like--url').forEach((ele,i)=>{
             ele.style.boxShadow = 'none';
-        })
+        });
+        document.querySelectorAll('.beautiful__footer--link').forEach((ele,i)=>{
+            ele.style.color = 'white';
+        });
+        document.querySelector('.beautufil__header--words').src='https://v2.jinrishici.com/one.svg?color='+'white';
     }
 
-    //切换夜间与日间
-    function modeChange(){
 
-    }
-    
     
    
    

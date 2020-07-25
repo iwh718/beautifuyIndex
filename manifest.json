@@ -4,6 +4,7 @@
 	"version": "1.0",
 	"description": "一个极简的主页和网页优化器：净化常用下载站与百度首页。",
 	"author": "wih718",
+	"options_page": "options.html",
 	"icons":
 	{
 		"48": "icon.png",
