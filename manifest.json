@@ -50,14 +50,7 @@
     ],
     "permissions":
 	[
-		"contextMenus", 
 		"tabs",
-		"notifications", 
-		"webRequest", 
-		"history",
-		"webRequestBlocking",
-		"storage", 
-		"http://*/*", 
-		"https://*/*" 
+		"storage"
 	]
 }
